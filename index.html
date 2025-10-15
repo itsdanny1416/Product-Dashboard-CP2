@@ -2,17 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Store Products</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <h1>Store Products</h1>
   </header>
 
-  <div id="product-container"></div>
+  <main class="site-main">
+    <section class="toolbar" aria-label="Status">
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
 
-  <script src="cp_2.js"></script>
+    <section aria-labelledby="products-title">
+      <h2 id="products-title" class="visually-hidden">Product List</h2>
+      <div id="product-container" class="product-grid" role="list"></div>
+    </section>
+  </main>
+
+  <script src="cp_2.js" defer></script>
 </body>
 </html>
